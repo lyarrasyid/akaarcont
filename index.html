@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKA KONTRAKTOR | Build & Design Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome & Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', /* Mengaktifkan mode gelap berbasis class */
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a', /* Latar utama mewah */
+                        darker: '#020617', /* Latar section selang-seling */
+                        blue: '#00caeb', /* Aksen emas */
+                        blueHover: '#00caeb',
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-700 dark:bg-darker dark:text-slate-300 font-sans antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-5 px-6 md:px-12 flex justify-between items-center text-white border-b border-transparent">
+        
+        <!-- Logo -->
+        <a href="#home" class="text-2xl font-heading font-bold tracking-wider flex items-center gap-2 relative z-50">
+            <i class="fa-solid fa-building text-blue"></i>
+            <span class="lya">AKA</span> <span class="text-blue">KONTRAKTOR</span>
+        </a>
+        
+        <div class="flex items-center gap-6">
+            <!-- UNIFIED MENU (Desktop & Mobile) -->
+            <ul id="nav-links" class="fixed inset-0 bg-black/70 md:bg-transparent md:static z-40 flex flex-col md:flex-row items-center justify-center md:justify-end gap-8 text-xl md:text-sm font-heading md:font-medium tracking-wide backdrop-blur-lg md:backdrop-blur-none transition-transform duration-300 transform translate-x-full md:translate-x-0">
+                <li><a href="#home" class="nav-link active text-white md:text-inherit hover:text-blue transition-colors">Beranda</a></li>
+                <li><a href="#about" class="nav-link text-white md:text-inherit hover:text-blue transition-colors">Tentang Kami</a></li>
+                <li><a href="#services" class="nav-link text-white md:text-inherit hover:text-blue transition-colors">Layanan</a></li>
+                <li><a href="#portfolio" class="nav-link text-white md:text-inherit hover:text-blue transition-colors">Portofolio</a></li>
+                <li>
+                    <a href="#contact" class="nav-link font-bold text-blue md:text-darker md:bg-blue md:px-5 md:py-2 md:rounded-full md:font-semibold hover:text-white md:hover:bg-blueHover transition-colors md:shadow-[0_0_10px_rgba(0,202,235,0.2)]">
+                        Hubungi Kami
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="text-xl focus:outline-none hover:text-blue transition-colors relative z-50">
+                <i id="theme-icon" class="fa-solid fa-moon"></i>
+            </button>
+            
+            <!-- Mobile Menu Button (Berfungsi ganda: Buka & Tutup) -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none hover:text-gold transition-colors relative z-50 w-8 h-8 flex items-center justify-center">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-all duration-300 transform"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="relative h-screen w-full">
+        <div class="swiper heroSwiper h-full w-full">
+            <div class="swiper-wrapper h-full">
+                <!-- Slide 1: Eksterior Mewah -->
+                <div class="swiper-slide relative h-full">
+                    <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80" alt="Konstruksi Rumah Mewah" class="w-full h-full object-cover brightness-[0.4] scale-105 transform transition-transform duration-[10000ms] hover:scale-100">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                        <span class="text-blue font-semibold tracking-[0.2em] uppercase mb-4 text-sm md:text-base drop-shadow-md">Wujudkan Desain Impian Anda</span>
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight max-w-4xl drop-shadow-lg">
+                            Kontraktor Bangunan <br><span class="text-blue font-italic">&</span> Konstruksi Baja
+                        </h1>
+                        <p class="text-lg text-slate-200 mb-10 max-w-2xl font-light drop-shadow-md">
+                            Kami merealisasikan konsep gedung custom yang unik dengan sirkulasi sehat dan ruang efisien untuk kenyamanan Anda.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#portfolio" class="bg-blue hover:bg-blueHover text-darker font-semibold py-3 px-8 rounded-full transition-all shadow-lg">Lihat Proyek</a>
+                            <a href="#contact" class="bg-transparent border border-white text-white hover:bg-white hover:text-darker font-semibold py-3 px-8 rounded-full transition-all">Konsultasi Gratis</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2: Konstruksi Baja -->
+                <div class="swiper-slide relative h-full">
+                    <img src="https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80" alt="Konstruksi Baja" class="w-full h-full object-cover brightness-[0.4]">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-4 drop-shadow-lg">Struktur Kuat, <span class="text-blue">Presisi Tinggi</span></h1>
+                        <p class="text-lg text-slate-200 mb-8 max-w-2xl font-light drop-shadow-md">Spesialis pemasangan struktur baja fabrikasi dan erection dengan tim bersertifikasi ahlinya.</p>
+                        <a href="#services" class="bg-blue hover:bg-blueHover text-darker font-semibold py-3 px-8 rounded-full transition-all shadow-lg">Layanan Kami</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Navigation -->
+            <div class="swiper-button-next text-blue/30 hover:text-blue"></div>
+            <div class="swiper-button-prev text-blue/30 hover:text-blue"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-white dark:bg-dark transition-colors duration-300">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Images Grid -->
+            <div class="relative grid grid-cols-2 gap-4">
+                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Arsitek Bekerja" class="rounded-xl object-cover h-64 w-full shadow-lg mt-8">
+                <img src="https://images.pexels.com/photos/2219035/pexels-photo-2219035.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pekerja Konstruksi" class="rounded-xl object-cover h-80 w-full shadow-lg">
+                <!-- Floating Stats -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue text-darker p-6 rounded-lg shadow-xl text-center border-4 border-white dark:border-dark transition-colors duration-300">
+                    <h3 class="text-4xl font-bold font-heading">50+</h3>
+                    <p class="text-sm font-semibold uppercase">Proyek Selesai</p>
+                </div>
+            </div>
+            <!-- Text Content -->
+            <div>
+                <h4 class="text-blue font-semibold tracking-widest mb-2 uppercase text-sm flex items-center gap-2"><div class="w-8 h-[1px] bg-blue"></div> Tentang Perusahaan</h4>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Membangun Lebih Dari Sekadar Bangunan</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                    <strong>AKA KONTRAKTOR</strong> didirikan oleh Alfian Rizaldi Janu, S.T., seorang lulusan Arsitektur yang berdedikasi memberikan hasil terbaik. Nama AKA (Abdul Kareem) mencerminkan nilai perusahaan yang menjunjung kemuliaan dan dedikasi penuh dalam setiap karya.
+                </p>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed italic border-l-4 border-blue pl-4">
+                    "Bersungguh-sungguhlah untuk mendapatkan apa yang bermanfaat bagimu. Dan mintalah pertolongan kepada Allah."
+                </p>
+                <!-- Key Features List -->
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <li class="flex items-center gap-3 text-slate-800 dark:text-white"><i class="fa-solid fa-check-circle text-blue"></i> Tim Site & Office Profesional</li>
+                    <li class="flex items-center gap-3 text-slate-800 dark:text-white"><i class="fa-solid fa-check-circle text-blue"></i> Manajemen Waktu Ketat</li>
+                    <li class="flex items-center gap-3 text-slate-800 dark:text-white"><i class="fa-solid fa-check-circle text-blue"></i> Laporan Progres Transparan</li>
+                    <li class="flex items-center gap-3 text-slate-800 dark:text-white"><i class="fa-solid fa-check-circle text-blue"></i> Material Berkualitas</li>
+                </ul>
+                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Tanda Tangan CEO" class="h-12 opacity-50 grayscale invert dark:invert-0">
+                <p class="text-sm text-blue mt-2 font-heading font-semibold">Alfian Rizaldi Janu - CEO / Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (Bintoro Style) -->
+    <section class="py-20 px-6 md:px-12 bg-slate-50 dark:bg-darker border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h4 class="text-blue font-semibold tracking-widest mb-2 uppercase text-sm">Keunggulan Kami</h4>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Mengapa Memilih AKA Kontraktor?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="text-center p-6 bg-white dark:bg-dark rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue dark:hover:border-blue transition-colors group shadow-sm hover:shadow-md">
+                    <i class="fa-solid fa-pen-ruler text-4xl text-blue mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Desain Kustom</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Desain bangunan yang unik dan fungsional disesuaikan dengan selera dan kebutuhan Anda.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="text-center p-6 bg-white dark:bg-dark rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue dark:hover:border-blue transition-colors group shadow-sm hover:shadow-md">
+                    <i class="fa-solid fa-magnifying-glass-chart text-4xl text-blue mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Kontrol Kualitas</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Pengawasan langsung di lapangan (on-site) untuk memastikan material dan struktur sesuai standar.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="text-center p-6 bg-white dark:bg-dark rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue dark:hover:border-blue transition-colors group shadow-sm hover:shadow-md">
+                    <i class="fa-regular fa-calendar-check text-4xl text-blue mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Tepat Waktu</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Penjadwalan (Time Schedule) yang terukur dan pelaporan progres yang transparan ke klien.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="text-center p-6 bg-white dark:bg-dark rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue dark:hover:border-blue transition-colors group shadow-sm hover:shadow-md">
+                    <i class="fa-solid fa-helmet-safety text-4xl text-blue mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Tenaga Ahli</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Dikerjakan oleh tim ahli spesialis baja, beton, mekanikal, dan arsitektur berpengalaman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 px-6 md:px-12 bg-white dark:bg-dark transition-colors duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-2xl">
+                <h4 class="text-blue font-semibold tracking-widest mb-2 uppercase text-sm flex items-center gap-2"><div class="w-8 h-[1px] bg-blue"></div> Fokus Layanan</h4>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white">Solusi Konstruksi Terpadu</h2>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md text-sm md:text-right">Kami melayani pengerjaan dari tahap perencanaan arsitektur hingga tahap serah terima kunci (Design & Build).</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bangunan Sipil" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/70 to-transparent p-8 flex flex-col justify-end">
+                    <div class="bg-blue w-12 h-12 flex items-center justify-center rounded-full mb-4 text-darker text-xl"><i class="fa-solid fa-house"></i></div>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-2">Konstruksi Bangunan</h3>
+                    <p class="text-slate-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Pembangunan rumah tinggal, perumahan, hingga gedung bertingkat dengan material beton bermutu tinggi.</p>
+                </div>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Konstruksi Baja" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/70 to-transparent p-8 flex flex-col justify-end">
+                    <div class="bg-blue w-12 h-12 flex items-center justify-center rounded-full mb-4 text-darker text-xl"><i class="fa-solid fa-industry"></i></div>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-2">Konstruksi Baja (WF/H-Beam)</h3>
+                    <p class="text-slate-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Fabrikasi dan ereksi baja untuk pabrik, gudang, lapangan olahraga (Padel), dan fasilitas komersial lainnya.</p>
+                </div>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Jasa Arsitek" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/70 to-transparent p-8 flex flex-col justify-end">
+                    <div class="bg-blue w-12 h-12 flex items-center justify-center rounded-full mb-4 text-darker text-xl"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-2">Desain Arsitektur</h3>
+                    <p class="text-slate-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Layanan perancangan denah, fasad 3D, hingga perhitungan Rencana Anggaran Biaya (RAB) yang akurat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / GALLERY SECTION (Expanded Slider) -->
+    <section id="portfolio" class="py-24 px-0 bg-slate-50 dark:bg-darker overflow-hidden transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center mb-12">
+            <h4 class="text-blue font-semibold tracking-widest mb-2 uppercase text-sm">Karya Nyata Kami</h4>
+            <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-4">Galeri Proyek</h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Geser (swipe) untuk melihat berbagai proyek yang telah berhasil kami selesaikan dengan standar kualitas terbaik.</p>
+        </div>
+
+        <!-- Portfolio Swiper (Drag/Swipe Enabled) -->
+        <div class="swiper portfolioSwiper w-full pb-16 px-6 md:px-12 cursor-grab active:cursor-grabbing">
+            <div class="swiper-wrapper">
+                
+                <!-- Project 1 -->
+                <div class="swiper-slide group">
+                    <div class="relative overflow-hidden rounded-xl h-[400px] shadow-lg">
+                        <img src="https://images.pexels.com/photos/2219035/pexels-photo-2219035.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Struktur Baja Capital" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-b-4 border-blue">
+                            <span class="bg-blue/90 text-darker px-3 py-1 rounded text-xs w-max mb-2 font-semibold">Konstruksi Baja</span>
+                            <h3 class="text-xl font-heading font-bold text-white">Capital Tanah Kusir</h3>
+                            <p class="text-slate-200 text-sm"><i class="fa-solid fa-location-dot text-blue mr-1"></i> Jakarta Selatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="swiper-slide group">
+                    <div class="relative overflow-hidden rounded-xl h-[400px] shadow-lg">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rumah Mewah Zeta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-b-4 border-blue">
+                            <span class="bg-blue/90 text-darker px-3 py-1 rounded text-xs w-max mb-2 font-semibold">Residensial</span>
+                            <h3 class="text-xl font-heading font-bold text-white">Zeta Residence</h3>
+                            <p class="text-slate-200 text-sm"><i class="fa-solid fa-location-dot text-blue mr-1"></i> Condet, Jakarta Timur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="swiper-slide group">
+                    <div class="relative overflow-hidden rounded-xl h-[400px] shadow-lg">
+                        <img src="https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Padel Banjarmasin" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-b-4 border-blue">
+                            <span class="bg-blue/90 text-darker px-3 py-1 rounded text-xs w-max mb-2 font-semibold">Fasilitas Olahraga</span>
+                            <h3 class="text-xl font-heading font-bold text-white">Circa La Padel</h3>
+                            <p class="text-slate-200 text-sm"><i class="fa-solid fa-location-dot text-blue mr-1"></i> Banjarmasin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="swiper-slide group">
+                    <div class="relative overflow-hidden rounded-xl h-[400px] shadow-lg">
+                        <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bangunan Beton" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-b-4 border-blue">
+                            <span class="bg-blue/90 text-darker px-3 py-1 rounded text-xs w-max mb-2 font-semibold">Fasilitas Olahraga</span>
+                            <h3 class="text-xl font-heading font-bold text-white">Padel Aceh</h3>
+                            <p class="text-slate-200 text-sm"><i class="fa-solid fa-location-dot text-blue mr-1"></i> Sumatera Utara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="swiper-slide group">
+                    <div class="relative overflow-hidden rounded-xl h-[400px] shadow-lg">
+                        <img src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gudang Baja" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-b-4 border-blue">
+                            <span class="bg-blue/90 text-darker px-3 py-1 rounded text-xs w-max mb-2 font-semibold">Konstruksi Baja</span>
+                            <h3 class="text-xl font-heading font-bold text-white">Point Court Cipayung</h3>
+                            <p class="text-slate-200 text-sm"><i class="fa-solid fa-location-dot text-blue mr-1"></i> Jakarta Timur</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Custom Pagination / Navigation -->
+            <div class="swiper-pagination !bottom-0 mt-8"></div>
+        </div>
+
+        <div class="text-center mt-6">
+            <a href="#" class="inline-flex items-center gap-2 text-slate-800 border border-slate-800 hover:bg-slate-800 hover:text-white dark:text-blue dark:border-blue dark:hover:bg-blue dark:hover:text-darker transition-colors px-6 py-2 rounded-full font-semibold">
+                Lihat Semua Portofolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- BANNER CALL TO ACTION -->
+    <section class="py-16 px-6 md:px-12 bg-blue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-darker mb-4">Siap Membangun Proyek Impian Anda?</h2>
+            <p class="text-darker/80 font-medium mb-8">Diskusikan rencana pembangunan Anda dengan tim ahli kami secara gratis. Dapatkan estimasi biaya dan waktu yang transparan.</p>
+            <a href="https://wa.me/628970399449" target="_blank" class="inline-flex items-center gap-3 bg-darker text-white hover:bg-dark py-4 px-10 rounded-full font-bold text-lg shadow-xl transition-transform hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i> Konsultasi via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-slate-900 dark:bg-[#050812] pt-20 pb-10 px-6 md:px-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+            <div class="">
+                <a href="#home" class="text-2xl font-heading font-bold tracking-wider flex items-center gap-2 text-white mb-6">
+                    <i class="fa-solid fa-building text-blue"></i>
+                    AKA <span class="text-blue">KONTRAKTOR</span>
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
+                    Bergerak Membangun Negeri. Perusahaan kontraktor terpercaya yang fokus pada kualitas material, manajemen waktu, dan kepuasan klien.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 dark:bg-dark flex items-center justify-center text-blue hover:bg-blue hover:text-darker transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 dark:bg-dark flex items-center justify-center text-blue hover:bg-blue hover:text-darker transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 dark:bg-dark flex items-center justify-center text-blue hover:bg-blue hover:text-darker transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-heading font-bold text-lg mb-6">Menu Navigasi</h4>
+                <ul class="flex flex-col gap-3 text-sm text-slate-400">
+                    <li><a href="#home" class="hover:text-blue transition-colors">Beranda</a></li>
+                    <li><a href="#about" class="hover:text-blue transition-colors">Tentang Perusahaan</a></li>
+                    <li><a href="#services" class="hover:text-blue transition-colors">Layanan Konstruksi</a></li>
+                    <li><a href="#portfolio" class="hover:text-blue transition-colors">Galeri Proyek</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-heading font-bold text-lg mb-6">Kontak Kami</h4>
+                <ul class="flex flex-col gap-4 text-sm text-slate-400">
+                    <li class="flex items-start gap-3 hover:text-blue transition-colors">
+                        <i class="fa-solid fa-phone text-blue text-lg mt-1"></i>
+                        <span>08970399449</span>
+                    </li>
+                    <li class="flex items-start gap-3 hover:text-blue transition-colors">
+                        <i class="fa-brands fa-instagram text-blue text-lg mt-1"></i>
+                        <span>@akaarcont</span>
+                    </li>
+                    <li class="flex items-start gap-3 hover:text-blue transition-colors">
+                        <i class="fa-solid fa-envelope text-blue text-lg mt-1"></i>
+                        <span>rizaldiarsi25@Gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="map"><iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7456728076043!2d106.845732!3d-6.1541085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f59583cb41e7%3A0xf419019208de02a6!2sHermina%20Tower%20Kemayoran!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto border-t border-slate-700 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-4">
+            <p>&copy; 2026 AKA KONTRAKTOR. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart text-red-500"></i> for BuildMaster</p>
+        </div>
+    </footer>
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" aria-label="Kembali ke atas" class="fixed bottom-6 right-6 z-50 p-3 bg-blue text-darker rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:opacity-100 focus:outline-none">
+        <i class="fa-solid fa-chevron-up text-sm"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

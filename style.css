@@ -1,0 +1,72 @@
+html {
+    scroll-padding-top: 80px; /* Menghindari konten tertutup navbar sticky */
+}
+
+/* Transisi Scroll Navbar */
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* Light mode bg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Dark mode khusus nav-scrolled */
+.nav-scrolled {
+    background-color: rgba(2, 6, 23, 0.8); 
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+/* Scrollspy Nav Links (Desktop & Mobile) */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Garis bawah animasi khusus layar Desktop (md: 768px ke atas) */
+@media (min-width: 768px) {
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #00caeb;
+        transition: width 0.3s ease;
+    }
+    .nav-link.active::after, .nav-link:hover::after {
+        width: 100%;
+    }
+}
+
+/* Status Aktif Global */
+.nav-link.active {
+    color: #00caeb !important;
+}
+
+/* Indikator panah khusus layar Mobile (di bawah 768px) */
+@media (max-width: 767px) {
+    .nav-link.active::before {
+        content: '\f0da'; /* FontAwesome Arrow Right */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: -25px;
+        color: #00caeb;
+    }
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    background-color: #94a3b8 !important; 
+    opacity: 0.5 !important;
+    transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+    background-color: #00caeb !important; 
+    opacity: 1 !important;
+    width: 32px;
+    border-radius: 8px;
+}
